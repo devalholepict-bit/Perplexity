@@ -1,8 +1,10 @@
 import "dotenv/config";
 import app from "./src/app.js";
 import connectDB from "./src/config/database.js";
+import {testAi } from "./src/service/ai.service.js";
 
 const PORT = process.env.PORT || 8000;
+testAi();
 
 connectDB()
     .catch((err) => {
